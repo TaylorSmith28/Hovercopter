@@ -38,10 +38,7 @@ In addition to these measurements we performed a hanging down test to compare wi
 
 MatLab was then used to develop a model of the hanging down system. We used a liner simulation our state model to get our results. Our model used the following A, B, C, and D matrices:
 
-$A=\begin{bmatrix}0&1\cr-33.0942&-0.6\end{bmatrix}$
-$B=\begin{bmatrix}0\cr169.0339\end{bmatrix}$
-$C=\begin{bmatrix}0\cr0\end{bmatrix}$
-$D=\begin{bmatrix}0\end{bmatrix}$
+![A,B,C,D Matrices](images/abcd_matrix.png)
 
 In developing our model we used a damping coefficient of 0.60. This was used to obtain our best results. These are shown below:
 
@@ -62,8 +59,7 @@ These gain values initialy did not perform well for our model and we then increa
 
 When developing this model we used the Q and R matrix shown below:
 
-$Q=\begin{bmatrix}10&0\cr0&1\end{bmatrix}$
-$R=\begin{bmatrix}1\end{bmatrix}$
+![Q,R Matrices](images/qr_matrix.png)
 
 Using these Q and R matrix we obtained eigenvalues of -3.1725 and -168.8093. This corresponded to gain values of 2.9725 and 1.0139.
 
@@ -72,7 +68,7 @@ Overall this system performed significantly better than we used our hand placed 
 ## Kalman Full Order Observer
 A Kalman full order observer can be used to estimate the next state variables from the inputs of a system. The full order observer was modeled in MatLab using the poles obtained using LQR. The K gain matrix was obtained:
 
-$K=\begin{bmatrix}171.3725\cr399.6003\end{bmatrix}$
+![K Matrix](images/k_matrix.png)
 
  Below is the simulated response of the system with this K matrix:
 
