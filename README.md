@@ -76,4 +76,4 @@ A Kalman full order observer can be used to estimate the next state variables fr
 
  ![Full Order Observer Simulation](images/full_order_simulation_kalman_filter.png)
 
- While we were able to simulate the system we were unable to properly implement the Kalman full order observer into our device code. See the results here: [Kalman Full Order Observer Results](videos/kalman_placed.mov)
+ While we were able to simulate the system we were unable to properly implement the Kalman full order observer into our device code. See the results here: [Kalman Full Order Observer Results](videos/full_order_observer.mov)
