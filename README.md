@@ -59,7 +59,7 @@ Our first step in developing a controller for the hovercopter was to hand place 
 These gain values initialy did not perform well for our model and we then increased them manually to find gain values of 1.1482 and 1.049. These worked well but were still slightly overdamped and the hover arm experienced slightly "wobbliness" due to this. A video of these results are shown here [Hand Placed Results](videos/hand_placed.mov).
 
 ## LQR Pole Placing
- Linear-quadratic regulator control was used next in the development of our controller model. Octave's [lqr() function](https://octave.sourceforge.io/control/function/lqr.html) uses our A and B state space model matrices as weel as a state weighting matric and an input weighting matrix, Q and R, to set the gains. The Q matrix defines the "weight" of each state variable and how quickly it should be corrected. The R matrix represents the cost of control to correct the system back to where it should be.
+ Linear-quadratic regulator control was used next in the development of our controller model. Octave's [lqr() function](https://octave.sourceforge.io/control/function/lqr.html) uses our A and B state space model matrices as well as a state weighting matrix and an input weighting matrix, Q and R, to set the gains. The Q matrix defines the "weight" of each state variable and how quickly it should be corrected. The R matrix represents the cost of control to correct the system back to where it should be.
 
 When developing this model we used the Q and R matrix shown below:
 
@@ -67,7 +67,7 @@ When developing this model we used the Q and R matrix shown below:
 
 Using these Q and R matrix we obtained eigenvalues of -3.1725 and -168.8093. This corresponded to gain values of 2.9725 and 1.0139.
 
-Overall this system performed significantly better than we used our hand placed poles. You can view our results for this here: [LQR Results](videos/lqr_placed.mov)
+Overall this system performed significantly better our hand placed poles. You can view our results for this here: [LQR Results](videos/lqr_placed.mov)
 
 ## Kalman Full Order Observer
 A Kalman full order observer can be used to estimate the next state variables from the inputs of a system. The full order observer was modeled in MatLab using the poles obtained using LQR. The K gain matrix was obtained:
