@@ -1,7 +1,9 @@
 # HoverCopter Project
 The Hovercopter Project is a project for Walla Walla University's ENGR 456 Control Systems. The goal of the project was to implement a state spaced control system to reach a stable altitude.
 
-## Libraries Used:
+## Software:
+This project was developed using C++ with the arduino IDE for an ESP32.
+
 ### 6302view
 Throughout this project we used 6302view, an interactive GUI that can be used to monitor and update variables in real time. It includes GUI components such as sliders, buttons, and plots. The GUI can be started by running local_server.py and then launching gui.html in a web browser. The repository for this library is found here: https://github.com/almonds0166/6302view/tree/master/6302view.
 
